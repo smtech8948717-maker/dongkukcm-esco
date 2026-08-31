@@ -2087,6 +2087,31 @@ table {
 @media (max-width: 760px) {
   #slide10 .image-wrapper { width: 100% !important; }
   #slide10 .image-wrapper img { width: 100% !important; height: auto !important; object-fit: contain !important; }
+
+  /* Affinity-law savings box: keep both values inside phone viewport */
+  #slide13 .number-box {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 6px !important;
+    padding: 16px 8px !important;
+    width: 100% !important;
+  }
+  #slide13 .number-box > div {
+    min-width: 0 !important;
+    padding: 0 4px !important;
+  }
+  #slide13 .number-box > div:nth-child(2) {
+    padding-left: 8px !important;
+  }
+  #slide13 .number-box .number {
+    font-size: 31px !important;
+    white-space: nowrap !important;
+  }
+  #slide13 .number-box .number-label {
+    font-size: 11px !important;
+    line-height: 1.45 !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+  }
 }
 </style>
 
