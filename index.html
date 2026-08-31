@@ -2077,6 +2077,17 @@ table {
         padding: 14px !important;
     }
 }
+
+/* Cooling tower photo enlargement */
+@media (min-width: 761px) {
+  #slide10 .two-column { grid-template-columns: 0.82fr 1.18fr; gap: 22px; }
+  #slide10 .image-wrapper { height: 430px; }
+  #slide10 .image-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+}
+@media (max-width: 760px) {
+  #slide10 .image-wrapper { width: 100% !important; }
+  #slide10 .image-wrapper img { width: 100% !important; height: auto !important; object-fit: contain !important; }
+}
 </style>
 
 </head>
@@ -2617,7 +2628,7 @@ table {
 
 <!-- Slide 10: Image_Right_Text_Left (쿨링타워 리트로핏) -->
 
-<div class="slide-container" id="slide10">
+<div class="slide-container cooling-tower-slide" id="slide10">
 
     <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
 
