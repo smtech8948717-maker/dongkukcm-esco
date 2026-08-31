@@ -1841,6 +1841,244 @@ table {
 </style>
 
 
+
+<style id="mobile-fullfit-override">
+@media (max-width: 760px) {
+    html, body {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Absolutely prevent horizontal overflow */
+    *, *::before, *::after {
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .slide-container,
+    .slide-container.bleed-image-layout {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 18px 12px 22px !important;
+        overflow: hidden !important;
+        transform: none !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+
+    .slide-container > *,
+    .content-area,
+    .content-container,
+    .image-container,
+    .title-layout,
+    .section-title-layout,
+    .two-column,
+    .two-column.tiled,
+    .tiled-content,
+    .grid-5-col,
+    .card-grid-3,
+    .strategy-banner-card,
+    .timeline-layout,
+    .qa-layout,
+    .chart-container,
+    .table-layout,
+    .image-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .title-meta-grid,
+    .two-column,
+    .two-column.tiled,
+    .tiled-content,
+    .grid-5-col,
+    .card-grid-3 {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+
+    .title-layout h1 {
+        font-size: 21px !important;
+        line-height: 1.35 !important;
+        word-break: keep-all !important;
+        overflow-wrap: anywhere !important;
+    }
+
+    .title-layout .subtitle,
+    .section-title-layout p,
+    .qa-layout p {
+        font-size: 13px !important;
+        line-height: 1.6 !important;
+        word-break: keep-all !important;
+        overflow-wrap: anywhere !important;
+    }
+
+    .slide-title {
+        width: 100% !important;
+        font-size: 18px !important;
+        line-height: 1.35 !important;
+        white-space: normal !important;
+        word-break: keep-all !important;
+        overflow-wrap: anywhere !important;
+    }
+
+    .section-title-layout h2 {
+        font-size: 25px !important;
+        line-height: 1.35 !important;
+        overflow-wrap: anywhere !important;
+    }
+
+    p, li, span, td, th,
+    .tile p, .card-item p, .card-retrofit p,
+    .two-column li, .bullet-list li, .bleed-text-side p {
+        font-size: 13px !important;
+        line-height: 1.58 !important;
+        white-space: normal !important;
+        word-break: keep-all !important;
+        overflow-wrap: anywhere !important;
+    }
+
+    .tile, .card-item, .card-retrofit,
+    .two-column.tiled > div,
+    .meta-pill {
+        width: 100% !important;
+        padding: 14px !important;
+    }
+
+    .tile h3,
+    .card-item .card-header,
+    .two-column.tiled h3,
+    .card-retrofit h4 {
+        font-size: 15px !important;
+        line-height: 1.4 !important;
+        white-space: normal !important;
+        overflow-wrap: anywhere !important;
+    }
+
+    .strategy-banner-card {
+        display: block !important;
+        padding: 14px !important;
+    }
+
+    .strategy-banner-card .banner-badges {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 6px !important;
+    }
+
+    .strategy-banner-card .badge-pill {
+        flex: 1 1 auto !important;
+        font-size: 11px !important;
+        padding: 5px 7px !important;
+        white-space: normal !important;
+    }
+
+    /* Images must always stay inside viewport */
+    img, svg, canvas, video {
+        width: auto !important;
+        max-width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+
+    .slide-container.bleed-image-layout img.bleed-image-side,
+    .image-wrapper img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+    }
+
+    /* Force tables inside screen instead of horizontal scroll */
+    .table-layout {
+        overflow: hidden !important;
+    }
+
+    .table-layout table {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        table-layout: fixed !important;
+        border-collapse: collapse !important;
+    }
+
+    .table-layout th,
+    .table-layout td {
+        width: auto !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        padding: 5px 3px !important;
+        font-size: 9.5px !important;
+        line-height: 1.35 !important;
+        white-space: normal !important;
+        word-break: break-word !important;
+        overflow-wrap: anywhere !important;
+    }
+
+    .bar {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .bar .label {
+        width: 100% !important;
+        flex: none !important;
+        text-align: left !important;
+        font-size: 13px !important;
+        margin-bottom: 4px !important;
+    }
+
+    .bar .bar-inner {
+        width: 100% !important;
+    }
+
+    .timeline-layout {
+        display: block !important;
+        height: auto !important;
+    }
+
+    .timeline-item {
+        width: 100% !important;
+        margin-bottom: 10px !important;
+    }
+
+    .timeline-item .content-wrapper,
+    .timeline-item:nth-child(odd) .content-wrapper,
+    .timeline-item:nth-child(even) .content-wrapper {
+        position: static !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    #formula-container {
+        width: 100% !important;
+        overflow: hidden !important;
+        padding: 8px !important;
+    }
+
+    #formula-container math {
+        font-size: 13px !important;
+    }
+
+    .qa-layout .contact-card {
+        width: 100% !important;
+        padding: 14px !important;
+    }
+}
+</style>
+
 </head>
 
 <body>
